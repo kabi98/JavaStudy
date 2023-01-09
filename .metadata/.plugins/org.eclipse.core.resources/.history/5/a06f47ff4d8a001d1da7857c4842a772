@@ -1,0 +1,22 @@
+package ex01변수;
+
+public class Ex02기본변수 {
+	
+	
+	public static void main(String[] args) {
+		// Java의 자료형
+		// 1. 기본타입 (Primitive, Basic)
+		
+		// 정수타입 (byte, short, int, long)
+		// byte - 8bit
+		// short - 32bit
+		// int - 64bit
+		// long - 128bit
+		
+		
+		
+		
+		// 2. 참조타입 (Reference) - 추후
+	}
+
+}

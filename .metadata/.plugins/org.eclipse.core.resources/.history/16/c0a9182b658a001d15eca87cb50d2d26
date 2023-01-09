@@ -1,0 +1,25 @@
+package ex02연산자;
+
+public class Ex01산술연산자 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int iNum1 = 7;
+		int iNum2 = 3;
+		float fNum3 = (float) 7/3;
+		double dNum4 = 3.0;
+		
+		System.out.println(iNum1 + iNum2);
+		System.out.println(iNum1 - iNum2);
+		System.out.println(iNum1 * iNum2);
+		System.out.println(iNum1 / iNum2);
+		System.out.println(iNum1 % iNum2);
+
+		System.out.println((float)(iNum1 / iNum2));
+		System.out.println(fNum3);
+		
+		System.out.println(iNum1 % dNum4);
+	}
+
+}

@@ -1,0 +1,33 @@
+package ex01변수;
+
+public class Ex03변수의특징과형변환 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 변수명 규칙
+		// 1. 변수명을 지을때는 되도록이면 의미가 있는 이름으로 지을 것
+		// 2. Java에서는 변수명에 키워드를 사용할 수 없다.( 예: abstract, for, if 등)
+		// 3. Java는 변수명에 대소문자를 구분되며 변수명의 길이는 제한이 없다.
+		// 4. 변수명의 숫자로 시작할 수 없다.
+		// 5. 특수문자는 '_' 와 '$'만 허용된다.
+		
+		String name_age = "문경수///";
+		String 이름 = "문경수";
+
+		int Num1 = 10;
+		int num1 = 100;
+
+		// 형변환 - 자료형태를 변환하는 것
+		byte byteAge1 = 100;
+		int intAge2 = byteAge1;
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
