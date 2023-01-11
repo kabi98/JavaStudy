@@ -5,34 +5,33 @@ import java.util.Scanner;
 public class ExPage01 {
 
 	public static void main(String[] args) {
+
 		System.out.println("*** Start ***");
 //////////////////////////////////////////////////////////////////////////////////
-		final int HOUR_PAY = 5000, FULL_HOUR = 8;
-		final double OVERTIME_PERCENT = 1.5;
-
-		int iWorkHour = 0;
-		int iTotalPay = 0;
-		int iOverTimeHour = 0;
-
 		Scanner sc = new Scanner(System.in);
+		int iGoalWeight = 0, iStartWeight = 0;
+		int iReduceWeight = 0, iNowWeight = 0;
+		int iWeeks = 0;
 
-		System.out.print("일한 시간을 입력하세요 : ");
-		iWorkHour = sc.nextInt();
+		System.out.print("현재 몸무게 : ");
+		iStartWeight = sc.nextInt();
+		System.out.print("목표 몸무게 : ");
+		iGoalWeight = sc.nextInt();
 
-		iTotalPay = 0;
-		iOverTimeHour = 0;
-		
-		if (iWorkHour > FULL_HOUR) {
-			iOverTimeHour = iWorkHour - FULL_HOUR;
-			iTotalPay = FULL_HOUR * HOUR_PAY;
-			iTotalPay += iOverTimeHour * HOUR_PAY * OVERTIME_PERCENT;
-		}
-		else
-		{
-			iTotalPay = iWorkHour * HOUR_PAY;
-		}
+		iNowWeight = iStartWeight;
+		do {
+			iWeeks++;
+			System.out.print(iWeeks + "주차 감량 몸무게 : ");
+			iReduceWeight = sc.nextInt();
 
-		System.out.printf("총 임금은 %d 입니다. %n", iTotalPay);
+			iNowWeight -= iReduceWeight;
+
+			if (iNowWeight <= iGoalWeight) {
+				System.out.println(iNowWeight + "kg 달성 !! 축하합니다!");
+				break;
+			}
+
+		} while (true);
 
 		sc.close();
 //////////////////////////////////////////////////////////////////////////////////
