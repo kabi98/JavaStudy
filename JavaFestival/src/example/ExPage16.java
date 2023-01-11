@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class ExPage16 {
 
 	public static void main(String[] args) {
+		
+		System.out.println("*** Start ***");
 //////////////////////////////////////////////////////////////////////////////////
 		int iN = 0;
 		int x = 0, y = 0;
@@ -40,6 +42,8 @@ public class ExPage16 {
 
 		sc.close();
 //////////////////////////////////////////////////////////////////////////////////
+		System.out.println("*** Finish ***");
+		
 	}
 
 }
