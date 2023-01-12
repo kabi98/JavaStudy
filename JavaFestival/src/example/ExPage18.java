@@ -2,32 +2,34 @@ package example;
 
 import java.util.Scanner;
 
-public class ExPage17 {
+public class ExPage18 {
 
 	public static void main(String[] args) {
-
 		System.out.println("*** Start ***");
 //////////////////////////////////////////////////////////////////////////////////
-		int iN = 0, iSequence = 0;
+		int iScanN = 0, iLastNum = 0, iFrontNums = 0, iSum = 0;
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print(" n 입력: ");
-		iN = sc.nextInt();
+		System.out.print(" 정수 입력 : ");
+		iScanN = sc.nextInt();
 
-		
-		iSequence = 1;
-		for (int i = 0; i < iN; i++) {
-			iSequence = iSequence + i;
-			System.out.printf(" %d", iSequence);
+		iSum = 0;
+		iFrontNums = iScanN;
+		while(iFrontNums > 0)
+		{
+			iLastNum = iFrontNums % 10;
+			iFrontNums = iFrontNums / 10;
+			iSum += iLastNum;
 		}
+		
+		System.out.printf("합은 %d 입니다.", iSum);
 		System.out.println();
 
 		sc.close();
 		System.out.println();
 //////////////////////////////////////////////////////////////////////////////////
 		System.out.println("*** Finish ***");
-		
 	}
 
 }

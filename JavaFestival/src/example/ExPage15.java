@@ -6,7 +6,7 @@ public class ExPage15 {
 		System.out.println("*** Start ***");
 //////////////////////////////////////////////////////////////////////////////////
 
-		String[] arrGrade = { "A", "B", "C", "D", "F" };
+		final String[] GRADE_CHAR = { "A", "B", "C", "D", "F" };
 		int[] arrScroeCount = { 0, 0, 0, 0, 0 };
 		String[] arrEachScore;
 
@@ -16,8 +16,8 @@ public class ExPage15 {
 
 		arrEachScore = strInputScore.split(",");
 		for (int i = 0; i < arrEachScore.length; i++) {
-			for (int j = 0; j < arrGrade.length; j++) {
-				if (arrEachScore[i].equals(arrGrade[j])) {
+			for (int j = 0; j < GRADE_CHAR.length; j++) {
+				if (arrEachScore[i].equals(GRADE_CHAR[j])) {
 					arrScroeCount[j]++;
 					break;
 				}
@@ -25,7 +25,7 @@ public class ExPage15 {
 		}
 
 		for (int i = 0; i < arrScroeCount.length; i++) {
-			System.out.printf("%s : %d명 %n", arrGrade[i], arrScroeCount[i]);
+			System.out.printf("%s : %d명 %n", GRADE_CHAR[i], arrScroeCount[i]);
 		}
 
 //////////////////////////////////////////////////////////////////////////////////

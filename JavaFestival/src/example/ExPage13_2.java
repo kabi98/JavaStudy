@@ -28,7 +28,6 @@ public class ExPage13_2 {
 			for (y = 0; y < arrNbyN[x].length; y++) {
 				arrNbyN[x][y] = (x * iScanY) + (y + 1);
 			}
-
 		}
 
 		x = 0;
@@ -40,7 +39,6 @@ public class ExPage13_2 {
 			}
 			System.out.println();
 			x = 0;
-
 		}
 
 		sc.close();

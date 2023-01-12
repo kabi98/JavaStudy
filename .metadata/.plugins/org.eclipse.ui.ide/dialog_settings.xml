@@ -20,6 +20,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\test\JavaTetris-master\src"/>
+			<item value="D:\test\JAVA_SWING_TETRIS-master\JAVA_TETRIS"/>
 			<item value="D:\test\TetrisForDesktopWithJava-dev_ver_0_4"/>
 			<item value="D:\Git\JavaStudy\TetrisForDesktopWithJava-dev_ver_0_4\src\com\kkikkodev\desktop\tetris"/>
 			<item value="D:\Git\JavaStudy\TetrisForDesktopWithJava-dev_ver_0_4\src"/>

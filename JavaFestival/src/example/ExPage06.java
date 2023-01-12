@@ -12,11 +12,11 @@ public class ExPage06 {
 		iSum = 0;
 		while (i <= NUM_COUNT) {
 			iSum += j * i;
-//			System.out.printf("i:%d, j:%d, i*j:%d, iSum:%d %n", 
-//					i, j, i*j, iSum);
+			System.out.printf("(%d*%d) +", j, i);
 			i++;
 			j--;
 		}
+		System.out.println();
 
 		System.out.printf("%d %n", iSum);
 		System.out.println();
