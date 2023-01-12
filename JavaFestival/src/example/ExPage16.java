@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExPage16 {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("*** Start ***");
 //////////////////////////////////////////////////////////////////////////////////
 		int iN = 0;
@@ -24,9 +24,12 @@ public class ExPage16 {
 
 		for (x = 0; x < arrNbyN.length; x++) {
 			for (y = 0; y < arrNbyN[x].length; y++) {
-				arrNbyN[x][y] = (x + 1) + (y * iN);
+				if (y % 2 == 0) {
+					arrNbyN[x][y] = (x + 1) + (y * iN);
+				} else {
+					arrNbyN[x][y] = (iN - x) + (y * iN);
+				}
 			}
-
 		}
 
 		System.out.println();
@@ -37,13 +40,12 @@ public class ExPage16 {
 			}
 			System.out.println();
 			x = 0;
-
 		}
 
 		sc.close();
 //////////////////////////////////////////////////////////////////////////////////
 		System.out.println("*** Finish ***");
-		
+
 	}
 
 }
