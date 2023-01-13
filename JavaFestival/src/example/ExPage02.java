@@ -25,6 +25,7 @@ public class ExPage02 {
 
 		if (iWorkHour > FULL_HOUR) {
 			iOverTimeHour = iWorkHour - FULL_HOUR;
+			
 			iTotalPay = FULL_HOUR * HOUR_PAY;
 			iTotalPay += iOverTimeHour * HOUR_PAY * OVERTIME_PERCENT;
 		} else {

@@ -27,6 +27,8 @@ public class Ex06_ArrCreate {
 			System.out.println();
 		}
 		
+		System.out.println();
+		
 		for(int i = 0; i<array2.length; i++)
 		{
 			for(int j = 0; j<array2[i].length; j++)
