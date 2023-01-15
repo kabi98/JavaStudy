@@ -1,54 +1,59 @@
 package KabiTetris;
 
-import javax.swing.JFrame;
+import java.awt.EventQueue;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.JPanel;
 
+import ktetris.controller.KTetrisController;
 import ktetris.view.MainFrame;
+import ktetris.view.StatusBar;
 
-
-//import com.lemonapple.javatetris.TetrisApplication;
 
 public class KTetrisApplication {
-	private JFrame frame;
+//	private JFrame frame;
+	private MainFrame frame;
+	
+	private final static Logger LOG = Logger.getGlobal();
 
 	public static void main(String[] args) {
-		System.out.println("*** KTMain main Start ***");
+		initLogger();		
 		
-//	    // create runnable objects
-//	    Runnable runnable1 = new KRunnable();
-//	    Runnable runnable2 = new KRunnable();
-//
-//	    Thread thread3 = new Thread(runnable1);
-//	    thread3.setName("Thread #3");
-//	    Thread thread4 = new Thread(runnable2);
-//	    thread4.setName("Thread #4");
-//
-//	    // start all threads
-//	    thread3.start();
-//	    thread4.start();		
+		LOG.info("*** Start ***");
 		
-	    
-		KTetrisApplication window = new KTetrisApplication();
-		window.frame.setVisible(true);
-	    
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					KTetrisApplication window = new KTetrisApplication();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 		
-		System.out.println("*** KTMain main Finish ***");
+		LOG.info("*** Finish ***");
 	}
 	
 	public KTetrisApplication() {
+		LOG.info("*** Start ***");
 		initialize();
+		LOG.info("*** Finish ***");
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
+		LOG.info("*** Start ***");
 		frame = new MainFrame();
 		
-//		TetrisGameController controller = new TetrisGameController(frame);
-//		
-//		JPanel statusBar = new StatusBar(controller);
-//		frame.getContentPane().add(statusBar);
+		KTetrisController controller = new KTetrisController(frame);
+		
+		frame.setController(controller);
+		
+		JPanel statusBar = new StatusBar(controller);
+		frame.getContentPane().add(statusBar);
 //		
 //		JPanel tetrisView = new TetrisView(controller);
 //		frame.getContentPane().add(tetrisView);
@@ -58,7 +63,23 @@ public class KTetrisApplication {
 //		
 //		JPanel holdingBlockView = new HoldBlockView(controller);
 //		frame.getContentPane().add(holdingBlockView);
+		LOG.info("*** Finish ***");
 	}
 	
 
+	private static void initLogger() {
+		Logger rootLogger = Logger.getLogger("");
+		Handler[] handlers = rootLogger.getHandlers();
+		if(handlers[0] instanceof ConsoleHandler) {
+			rootLogger.removeHandler(handlers[0]);
+		}
+		
+		LOG.setLevel(Level.INFO);
+		
+		Handler handler = new ConsoleHandler();
+		CustomLogFormatter fomatter = new CustomLogFormatter();
+		handler.setFormatter(fomatter);
+		LOG.addHandler(handler);
+	}
+	
 }

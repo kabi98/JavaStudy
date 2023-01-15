@@ -36,6 +36,9 @@ public class TetrisGameController implements Runnable, KeyListener {
 
 	@Override
 	public void run() {
+//		String threadName = Thread.currentThread().getName();
+//		System.out.printf("- %s has been started %n", threadName);
+
 		openGame();
 		int speed = 20;
 		int interval = 2000; // 2000 * 30 / 1000 = 60(sec)

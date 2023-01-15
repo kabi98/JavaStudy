@@ -11,4 +11,19 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="ktetris.view.MainFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="ktetris.view.StatusBar"/>
+    <fullyQualifiedTypeName name="ktetris.model.ViewListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
+    <fullyQualifiedTypeName name="ktetris.controller.KTetrisController"/>
+    <fullyQualifiedTypeName name="org.junit.platform.commons.logging.LoggerFactory"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="java.util.logging.Formatter"/>
+    <fullyQualifiedTypeName name="java.util.logging.Handler"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="java.util.logging.ConsoleHandler"/>
+    <fullyQualifiedTypeName name="KabiTetris.CustomLogFormatter"/>
+    <fullyQualifiedTypeName name="KabiTetris.KLogger"/>
 </qualifiedTypeNameHistroy>
