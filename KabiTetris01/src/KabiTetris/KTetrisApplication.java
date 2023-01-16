@@ -76,6 +76,8 @@ public class KTetrisApplication {
 		}
 		
 		LOG.setLevel(Level.INFO);
+//		LOG.setLevel(Level.WARNING);
+//		LOG.setLevel(Level.SEVERE);
 		
 		Handler handler = new ConsoleHandler();
 		CustomLogFormatter fomatter = new CustomLogFormatter();

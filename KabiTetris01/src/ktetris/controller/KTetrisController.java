@@ -75,8 +75,8 @@ public class KTetrisController implements Runnable, KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		LOG.info("**** Start *****");
-		LOG.info("**** Finish *****");
+//		LOG.info("**** Start *****");
+//		LOG.info("**** Finish *****");
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class KTetrisController implements Runnable, KeyListener {
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
 			LOG.info(" VK_UP ");
-//			currBlock.rotateBlock(board);
+			currBlock.rotateBlock(board);
 			break;
 		case KeyEvent.VK_LEFT:
 			LOG.info(" VK_LEFT ");
@@ -105,6 +105,14 @@ public class KTetrisController implements Runnable, KeyListener {
 //			while (keepCurrent == currBlock)
 //				currBlock.downBlock(board);
 			break;
+		case KeyEvent.VK_N: 
+			LOG.info(" VK_N ");
+			currBlock.nextBlock(board);
+
+//			TetrisBlock keepCurrent = currBlock;
+//			while (keepCurrent == currBlock)
+//				currBlock.downBlock(board);
+			break;
 			
 		}
 		reaquestPaint();
@@ -113,8 +121,8 @@ public class KTetrisController implements Runnable, KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		LOG.info("**** Start *****");
-		LOG.info("**** Finish *****");
+//		LOG.info("**** Start *****");
+//		LOG.info("**** Finish *****");
 	}
 ///////////////////////////////////////////////////////////////////////////////////////
 

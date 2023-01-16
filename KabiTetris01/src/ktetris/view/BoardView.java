@@ -51,7 +51,7 @@ public class BoardView extends JPanel implements ViewListener{
 		for (int i = 0; i < board.COL_SIZE; i++) {
 			for (int j = 0; j < board.ROW_SIZE; j++) {
 				g.setColor(whichColor[board.Board[j][i]]);
-				g.fillRect(width * i, height * j, width, height);
+				g.fill3DRect(width * i, height * j, width, height, true);
 			}
 		}
 		

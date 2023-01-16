@@ -26,7 +26,7 @@ public class BlocksView extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		g.setColor(Color.WHITE);
-		g.fillRect(0, 0, getWidth(), getHeight());
+		g.fill3DRect(0, 0, getWidth(), getHeight(), true);
 		if (lookingBlock == null) {
 			return;
 		}
@@ -37,7 +37,9 @@ public class BlocksView extends JPanel {
 		for (int i = 0; i < lookingBlock.block.length; i++) {
 			for (int j = 0; j < lookingBlock.block[0].length; j++) {
 				g.setColor(whichColor[lookingBlock.block[j][i]]);
-				g.fillRect(width * i, height * j, width, height);
+//				g.fillRect(width * i, height * j, width, height);
+				g.fill3DRect(width * i, height * j, width, height, true);
+				
 			}
 		}
 	}

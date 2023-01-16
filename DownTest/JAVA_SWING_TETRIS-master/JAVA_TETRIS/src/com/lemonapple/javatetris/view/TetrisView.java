@@ -40,7 +40,7 @@ public class TetrisView extends JPanel implements ViewListener {
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 20; j++) {
 				g.setColor(whichColor[board.block[j][i]]);
-				g.fillRect(width * i, height * j, width, height);
+				g.fill3DRect(width * i, height * j, width, height, true);
 			}
 		}
 
@@ -50,8 +50,8 @@ public class TetrisView extends JPanel implements ViewListener {
 			for (int j = 0; j < 4; j++) {
 				if (lookingBlock.block[j][i] > 0) {
 					g.setColor(whichColor[lookingBlock.block[j][i]]);
-					g.fillRect(width * (i + lookingBlock.posX), height
-							* (j + lookingBlock.posY), width, height);
+					g.fill3DRect(width * (i + lookingBlock.posX), height
+							* (j + lookingBlock.posY), width, height, true);
 				}
 			}
 		}

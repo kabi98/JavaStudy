@@ -48,32 +48,32 @@ public class MainFrame extends JFrame implements WindowListener {
 
 	@Override
 	public void windowClosed(WindowEvent e) {
-		LOG.info("*** Start ***");
-		LOG.info("*** Finish ***");
+//		LOG.info("*** Start ***");
+//		LOG.info("*** Finish ***");
 	}
 
 	@Override
 	public void windowIconified(WindowEvent e) {
-		LOG.info("*** Start ***");
-		LOG.info("*** Finish ***");
+//		LOG.info("*** Start ***");
+//		LOG.info("*** Finish ***");
 	}
 
 	@Override
 	public void windowDeiconified(WindowEvent e) {
-		LOG.info("*** Start ***");
-		LOG.info("*** Finish ***");
+//		LOG.info("*** Start ***");
+//		LOG.info("*** Finish ***");
 	}
 
 	@Override
 	public void windowActivated(WindowEvent e) {
-		LOG.info("*** Start ***");
-		LOG.info("*** Finish ***");
+//		LOG.info("*** Start ***");
+//		LOG.info("*** Finish ***");
 	}
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {
-		LOG.info("*** Start ***");
-		LOG.info("*** Finish ***");
+//		LOG.info("*** Start ***");
+//		LOG.info("*** Finish ***");
 	}
 
 }
