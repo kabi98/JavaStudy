@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import ktetris.controller.KTetrisController;
 import ktetris.view.MainFrame;
 import ktetris.view.StatusBar;
+import ktetris.view.BoardView;
 
 
 public class KTetrisApplication {
@@ -54,9 +55,9 @@ public class KTetrisApplication {
 		
 		JPanel statusBar = new StatusBar(controller);
 		frame.getContentPane().add(statusBar);
-//		
-//		JPanel tetrisView = new TetrisView(controller);
-//		frame.getContentPane().add(tetrisView);
+		
+		JPanel tetrisView = new BoardView(controller);
+		frame.getContentPane().add(tetrisView);
 //		
 //		JPanel nextBlocksView = new NextBlockView(controller);
 //		frame.getContentPane().add(nextBlocksView);

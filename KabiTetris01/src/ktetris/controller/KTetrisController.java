@@ -3,12 +3,13 @@ package ktetris.controller;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.swing.JFrame;
 
-import com.lemonapple.javatetris.model.TetrisBlock;
-
+import ktetris.model.KTetrisBlock;
+import ktetris.model.KTetrisBoard;
 import ktetris.model.ViewListener;
 
 public class KTetrisController implements Runnable, KeyListener {
@@ -20,6 +21,11 @@ public class KTetrisController implements Runnable, KeyListener {
 	private boolean isThreadAlive;
 	private JFrame frame;
 	private ArrayList<ViewListener> viewListener;
+	
+	private KTetrisBoard board;
+	private List<KTetrisBlock> waitBlockList;
+	private KTetrisBlock currBlock;
+	
 
 	private final static Logger LOG = Logger.getGlobal();
 
@@ -31,6 +37,8 @@ public class KTetrisController implements Runnable, KeyListener {
 		this.frame = frame;
 
 		this.viewListener = new ArrayList<ViewListener>();
+		this.board = new KTetrisBoard(this);
+		this.currBlock = new KTetrisBlock(this);
 
 		LOG.info("**** Finish *****");
 	}
@@ -135,7 +143,7 @@ public class KTetrisController implements Runnable, KeyListener {
 		frame.requestFocus();
 //		waitBlockList.clear();
 //		for (int i = 0; i < 3; i++) {
-//			waitBlockList.add(new TetrisBlock(this));
+//			waitBlockList.add(new KTetrisBlock(this));
 //		}
 //		currBlock = waitBlockList.remove(0);
 //		waitBlockList.add(new TetrisBlock(this));
@@ -157,4 +165,17 @@ public class KTetrisController implements Runnable, KeyListener {
 		LOG.info("**** Finish *****");
 	}
 
+	
+	public KTetrisBlock getCurrentBlock() {
+		return currBlock;
+	}
+
+	public List<KTetrisBlock> getNextBlocks() {
+		return waitBlockList;
+	}
+
+	public KTetrisBoard getBoard() {
+		return board;
+	}
+	
 }
