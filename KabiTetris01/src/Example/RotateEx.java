@@ -1,4 +1,4 @@
-package example;
+package Example;
 
 public class RotateEx {
 	public static void main(String[] args) {
