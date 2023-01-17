@@ -46,8 +46,6 @@ public class ExPage09 {
 	}
 	
 	private static void printArrayNoLine(int[] arrInt) {
-//		System.out.printf(" Array : ");
-
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}
@@ -55,8 +53,6 @@ public class ExPage09 {
 	}
 	
 	private static void printArrayNoLine(int[] arrInt, int iLen) {
-//		System.out.printf(" Array : ");
-
 		for (int i = 0; i < iLen; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}

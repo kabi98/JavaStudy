@@ -20,12 +20,13 @@ public class ExPage10 {
 			printArrayNoLine(arrScan);
 			
 			iDashCount = countDashFromArray(arrScan);
-			System.out.print("대시('-')의 총합 >> ");
-			System.out.println(iDashCount);
 			if(arrScan[0] == 0) {
 				break;
 			}
-				
+
+			System.out.print("대시('-')의 총합 >> ");
+			System.out.println(iDashCount);
+			
 		} while(true);
 		
 		sc.close();
@@ -34,16 +35,18 @@ public class ExPage10 {
 	
 	private static int countDashFromArray(int[] arrInt) {
 		// 0 ~ 9 까지의 DASH 갯수를 배열로 저장.
+		//                       [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 		final int [] DASH_COUNT = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
 		int iDashSum = 0;
 		
 		for(int i=0; i<arrInt.length; i++)
 		{
-			// Exam : arrInt[0] = 2 ==> DASH_COUNT[2] = 5
+			// Example : Scan Input : 2018
+			//        arrInt[0] = 2 ==> DASH_COUNT[2] = 5
 			//        arrInt[1] = 0 ==> DASH_COUNT[0] = 6
 			//        arrInt[2] = 1 ==> DASH_COUNT[1] = 2
 			//        arrInt[3] = 8 ==> DASH_COUNT[8] = 7
-			// sum = 20
+			//                    SUM : 5 + 6 + 2 + 7= 20
 			iDashSum += DASH_COUNT[arrInt[i]];
 		}
 		
@@ -51,8 +54,8 @@ public class ExPage10 {
 	}
 
 	private static int[] DecimalToArray(int iDecimal) {
-		ArrayList<Integer> arrInverseBin = new ArrayList<>();
-		int[] arrBinary = null;
+		ArrayList<Integer> listInverse = new ArrayList<>();
+		int[] arrDecimal = null;
 
 		int iQuotient = 0, iRemainder = 0;
 
@@ -60,18 +63,18 @@ public class ExPage10 {
 		do {
 			iRemainder = iQuotient % 10;
 			iQuotient = iQuotient / 10;
-			arrInverseBin.add(iRemainder);
+			listInverse.add(iRemainder);
 		} while (iQuotient > 0);
 
-		arrBinary = new int[arrInverseBin.size()];
+		arrDecimal = new int[listInverse.size()];
 
 		int iPlace = 0;
-		for (int i = arrInverseBin.size() - 1; i >= 0; i--) {
-			arrBinary[iPlace] = arrInverseBin.get(i);
+		for (int i = listInverse.size() - 1; i >= 0; i--) {
+			arrDecimal[iPlace] = listInverse.get(i);
 			iPlace ++;
 		}
 		
-		return arrBinary;
+		return arrDecimal;
 	}
 	
 	private static void printArrayNoLine(int[] arrInt) {

@@ -34,7 +34,7 @@ public class ExPage04 {
 	
 
 	private static int[] DecimalToBinary(int iDecimal) {
-		ArrayList<Integer> arrInverseBin = new ArrayList<>();
+		ArrayList<Integer> listInverse = new ArrayList<>();
 		int[] arrBinary = null;
 
 		int iQuotient = 0, iRemainder = 0;
@@ -43,14 +43,14 @@ public class ExPage04 {
 		do {
 			iRemainder = iQuotient % 2;
 			iQuotient = iQuotient / 2;
-			arrInverseBin.add(iRemainder);
+			listInverse.add(iRemainder);
 		} while (iQuotient > 0);
 
-		arrBinary = new int[arrInverseBin.size()];
+		arrBinary = new int[listInverse.size()];
 
 		int iPlace = 0;
-		for (int i = arrInverseBin.size() - 1; i >= 0; i--) {
-			arrBinary[iPlace] = arrInverseBin.get(i);
+		for (int i = listInverse.size() - 1; i >= 0; i--) {
+			arrBinary[iPlace] = listInverse.get(i);
 			iPlace ++;
 		}
 		

@@ -25,7 +25,7 @@ public class ExPage01 {
 //			System.out.printf("NewNum %2d ", iNewNum);
 //			printArrayNoLine(arrLotto);
 		}
-		printArray(arrLotto);
+		printLotto(arrLotto);
 
 		System.out.println("*** Finish ***");
 	}
@@ -41,16 +41,16 @@ public class ExPage01 {
 		return isDupl;
 	}
 
-	private static void printArrayNoLine(int[] arrLotto) {
+	private static void printArrayNoLine(int[] arrInt) {
 		System.out.printf(" Array : ");
 
-		for (int i = 0; i < arrLotto.length; i++) {
-			System.out.printf(" %2d ", arrLotto[i]);
+		for (int i = 0; i < arrInt.length; i++) {
+			System.out.printf(" %2d ", arrInt[i]);
 		}
 		System.out.printf("%n");
 	}
 
-	private static void printArray(int[] arrLotto) {
+	private static void printLotto(int[] arrLotto) {
 		for (int i = 0; i < arrLotto.length; i++) {
 			System.out.printf("행운의 숫자 : %2d %n", arrLotto[i]);
 		}
