@@ -2,6 +2,7 @@ package Example;
 
 import java.util.Arrays;
 
+
 public class RotateMatrix {
 
 	public static void main(String[] args) {
@@ -13,18 +14,46 @@ public class RotateMatrix {
 			{ 13, 14, 15, 16 }
 		};
 
-		for (var r: mat) {
-			System.out.println(Arrays.toString(r));
-		}
-		rotate(mat);
+		print_mat(mat);
+		
+		rotate_mat(mat);
+		
+		print_mat(mat);
 
-		for (var r: mat) {
-			System.out.println(Arrays.toString(r));
+		Shape[] shapes = new Shape[7];
+		
+		shapes[0] = new Shape(new int[][]{ {1, 1, 1, 1} } );   // I shape;
+		shapes[0].printShape();
+		shapes[0].rotateShape();
+		shapes[0].printShape();
+		
+		shapes[1] = new Shape(new int[][]{	{1, 1, 1},
+											{0, 1, 0} } );
+		
+		shapes[1].printShape();
+		shapes[1].rotateShape();
+		shapes[1].printShape();
+	}
+	
+	public static void print_mat(int[][] mat) {
+		for(int i=0; i<mat.length; i++)
+		{
+			for(int j=0; j<mat[i].length; j++)
+			{
+				System.out.printf("%2d ", mat[i][j]);
+			}
+			System.out.println();
 		}
+		System.out.println();
+		
+//		for (var r: mat) {
+//			System.out.println(Arrays.toString(r));
+//		}
+//		System.out.println();
 	}
 	
 	// In-place rotate it by 90 degrees in a clockwise direction
-	public static void rotate(int[][] mat)
+	public static void rotate_mat(int[][] mat)
 	{
 		// base case
 		if (mat == null || mat.length == 0) {
@@ -44,10 +73,9 @@ public class RotateMatrix {
 				mat[j][i] = temp;
 			}
 		}
+		
+//		print_mat(mat);
 
-		for (var r: mat) {
-			System.out.println(Arrays.toString(r));
-		}
 		// swap columns
 		for (int i = 0; i < N; i++)
 		{
@@ -58,11 +86,22 @@ public class RotateMatrix {
 				mat[i][N - j - 1] = temp;
 			}
 		}
-		for (var r: mat) {
-			System.out.println(Arrays.toString(r));
-		}
+		
+//		print_mat(mat);
+		
 	}
 
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
 	
 
 }

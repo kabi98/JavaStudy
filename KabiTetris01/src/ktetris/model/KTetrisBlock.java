@@ -19,7 +19,7 @@ public class KTetrisBlock {
 	
 	public int[][] block = new int[BLOCK_ROW][BLOCK_COL];
 	public int posX = 0, posY = 0;
-	public int c; // color.
+	public Color color; // color.
 	private KTetrisController controller;
 	
 	private final static Logger LOG = Logger.getGlobal();
@@ -29,7 +29,7 @@ public class KTetrisBlock {
 		
 		this.controller = controller;
 		Random rand = new Random();
-		this.c = 1 + rand.nextInt(4);
+		this.color = COLORS[rand.nextInt(COLORS.length)];
 		setBlock(rand.nextInt(BLOCK_TYPE));
 		
 		LOG.info("**** Finish *****");
@@ -40,40 +40,40 @@ public class KTetrisBlock {
 		LOG.info("**** Start *****");
 		
 		if (type == 0) {
-			block[0] = new int[] { c, 0, 0, 0 };
-			block[1] = new int[] { c, 0, 0, 0 };
-			block[2] = new int[] { c, 0, 0, 0 };
-			block[3] = new int[] { c, 0, 0, 0 };
+			block[0] = new int[] { 1, 0, 0, 0 };
+			block[1] = new int[] { 1, 0, 0, 0 };
+			block[2] = new int[] { 1, 0, 0, 0 };
+			block[3] = new int[] { 1, 0, 0, 0 };
 		} else if (type == 1) {
 			block[0] = new int[] { 0, 0, 0, 0 };
 			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { c, 0, 0, 0 };
-			block[3] = new int[] { c, c, c, 0 };
+			block[2] = new int[] { 1, 0, 0, 0 };
+			block[3] = new int[] { 1, 1, 1, 0 };
 		} else if (type == 2) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { c, 0, 0, 0 };
-			block[2] = new int[] { c, 0, 0, 0 };
-			block[3] = new int[] { c, c, 0, 0 };
+			block[1] = new int[] { 0, 0, 0, 0 };
+			block[2] = new int[] { 1, 1, 1, 0 };
+			block[3] = new int[] { 0, 0, 1, 0 };
 		} else if (type == 3) {
 			block[0] = new int[] { 0, 0, 0, 0 };
 			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { c, c, 0, 0 };
-			block[3] = new int[] { c, c, 0, 0 };
+			block[2] = new int[] { 1, 1, 0, 0 };
+			block[3] = new int[] { 1, 1, 0, 0 };
 		} else if (type == 4) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { c, 0, 0, 0 };
-			block[2] = new int[] { c, c, 0, 0 };
-			block[3] = new int[] { c, 0, 0, 0 };
+			block[1] = new int[] { 0, 0, 0, 0 };
+			block[2] = new int[] { 0, 1, 0, 0 };
+			block[3] = new int[] { 1, 1, 1, 0 };
 		} else if (type == 5) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { c, 0, 0, 0 };
-			block[2] = new int[] { c, c, 0, 0 };
-			block[3] = new int[] { 0, c, 0, 0 };
+			block[1] = new int[] { 0, 0, 0, 0 };
+			block[2] = new int[] { 0, 1, 1, 0 };
+			block[3] = new int[] { 1, 1, 0, 0 };
 		} else if (type >= 6) {
 			block[0] = new int[] { 0, 0, 0, 0 };
 			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { c, c, 0, 0 };
-			block[3] = new int[] { 0, c, c, 0 };
+			block[2] = new int[] { 1, 1, 0, 0 };
+			block[3] = new int[] { 0, 1, 1, 0 };
 		}
 		
 		LOG.info("**** Finish *****");
@@ -83,8 +83,8 @@ public class KTetrisBlock {
 	public void nextBlock(KTetrisBoard board) {
 		LOG.info("**** Start *****");
 		Random rand = new Random();
-		this.c = 1 + rand.nextInt(4);
-		setBlock(rand.nextInt(6));
+		this.color = COLORS[rand.nextInt(COLORS.length)];
+		setBlock(rand.nextInt(BLOCK_TYPE));
 		
 		LOG.info("**** Finish *****");
 		return ;
@@ -155,3 +155,5 @@ public class KTetrisBlock {
 	}
 	
 }
+
+
