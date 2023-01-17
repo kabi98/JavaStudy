@@ -12,25 +12,25 @@ public class ExPage14 {
 		strBinary = "01001101";
 		arrBinary = BinaryToArray(strBinary);
 		printArrayNoLine(arrBinary);
-		iDecimal = changeBinaryToDecimal(arrBinary);
+		iDecimal = BinaryToDecimal(arrBinary);
 		System.out.printf("%s (2) = %d(10) %n", strBinary, iDecimal);
 
 		strBinary = "00101000";
 		arrBinary = BinaryToArray(strBinary);
 		printArrayNoLine(arrBinary);
-		iDecimal = changeBinaryToDecimal(arrBinary);
+		iDecimal = BinaryToDecimal(arrBinary);
 		System.out.printf("%s (2) = %d(10) %n", strBinary, iDecimal);
 
 		System.out.println("*** Finish ***");
 	}
 
-	private static int changeBinaryToDecimal(int[] arrBinary) {
+	private static int BinaryToDecimal(int[] arrBinary) {
 		int iDecimal = 0;
-		int iPowerBinary = 1;
+		int iPlaceVaule = 1;
 
 		for (int i = arrBinary.length - 1; i >= 0; i--) {
-			iDecimal += arrBinary[i] * iPowerBinary;
-			iPowerBinary *= 2;
+			iDecimal += arrBinary[i] * iPlaceVaule;
+			iPlaceVaule *= 2;
 		}
 		return iDecimal;
 	}

@@ -35,7 +35,7 @@ public class ExPage10 {
 	
 	private static int countDashFromArray(int[] arrInt) {
 		// 0 ~ 9 까지의 DASH 갯수를 배열로 저장.
-		//                       [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+		// 각 수별 대시문자의 개수    [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 		final int [] DASH_COUNT = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
 		int iDashSum = 0;
 		

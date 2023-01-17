@@ -31,7 +31,6 @@ public class ExPage04 {
 		}
 		System.out.printf("%n");
 	}
-	
 
 	private static int[] DecimalToBinary(int iDecimal) {
 		ArrayList<Integer> listInverse = new ArrayList<>();

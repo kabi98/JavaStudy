@@ -13,7 +13,7 @@ public class ExPage11 {
 		int iScanOne = 0, iScanTwo = 0;
 		int [] arrTwo = null;
 		int [] arrMultiple = new int [DIGIT_NUM];
-		int iSum = 0, iDigit = 0;
+		int iSum = 0, iPlaceValue = 0;
 		
 		System.out.printf("첫 번째 숫자 입력 >> ");
 		iScanOne = sc.nextInt();
@@ -21,20 +21,20 @@ public class ExPage11 {
 		iScanTwo = sc.nextInt();
 		
 		arrTwo = DecimalToInverseArray(iScanTwo);
-//		printArrayNoLine(arrTwo);
+		printArrayNoLine(arrTwo);
 		
 		for(int i=0; i< arrMultiple.length; i++)
 		{
 			arrMultiple[i] = iScanOne * arrTwo[i];
 		}
+		printArrayNoLine(arrMultiple);
 		
-//		printArrayNoLine(arrMultiple);
-		
-		iSum = 0; iDigit = 1;
+		iSum = 0; 
+		iPlaceValue = 1;
 		for(int i=0; i< arrMultiple.length; i++)
 		{
-			iSum += arrMultiple[i] * iDigit;
-			iDigit *= 10; 
+			iSum += arrMultiple[i] * iPlaceValue;
+			iPlaceValue *= 10; 
 		}
 		printArray(arrMultiple);
 		System.out.printf(" %d %n", iSum);

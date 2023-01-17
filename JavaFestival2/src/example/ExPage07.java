@@ -13,15 +13,19 @@ public class ExPage07 {
 
 		Scanner sc = new Scanner(System.in);
 
+		System.out.println("입력 전");
 		printArrayNoLine(arrScan);
 
 		for (int i = 0; i < ARR_LEN; i++) {
 			System.out.printf("%d번째 수 입력 : ", i + 1);
 			arrScan[i] = sc.nextInt();
 		}
-//		printArrayNoLine(arrScan);
+		
+		System.out.println("정렬 전");
+		printArrayNoLine(arrScan);
 
-		arrSort = sortArray(arrScan);
+		arrSort = selectionSort(arrScan);
+		
 		System.out.println("정렬 후");
 		printArrayNoLine(arrSort);
 
@@ -29,11 +33,11 @@ public class ExPage07 {
 		System.out.println("*** Finish ***");
 	}
 
-	private static int[] sortArray(int[] arrInt) {
+	private static int[] selectionSort(int[] arrInt) {
 
-		int iTemp =0;
+		int iTemp = 0;
 		
-		for (int i = 0; i < arrInt.length; i++) {
+		for (int i = 0; i < arrInt.length - 1; i++) {
 			for (int j = i + 1; j < arrInt.length; j++) {
 				if(arrInt[i] > arrInt[j]) {
 					iTemp = arrInt[i];
@@ -47,8 +51,6 @@ public class ExPage07 {
 	}
 
 	private static void printArrayNoLine(int[] arrInt) {
-//		System.out.printf(" Array : ");
-
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}

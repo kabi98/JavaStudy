@@ -22,7 +22,8 @@ public class ExPage05 {
 				}
 			}
 		}
-		
+
+		printArrayNoLine(point);
 		System.out.printf("result = [ %d, %d] %n", iIndex1, iIndex2);
 
 		System.out.println("*** Finish ***");
@@ -34,6 +35,13 @@ public class ExPage05 {
 		if(iDiff < 0)
 			iDiff = iDiff * -1;
 		return iDiff;
+	}
+	
+	private static void printArrayNoLine(int[] arrInt) {
+		for (int i = 0; i < arrInt.length; i++) {
+			System.out.printf(" %2d", arrInt[i]);
+		}
+		System.out.printf("%n");
 	}
 
 }

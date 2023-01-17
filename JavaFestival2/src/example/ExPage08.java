@@ -6,8 +6,8 @@ public class ExPage08 {
 		System.out.println("*** Start ***");
 		final int ARR_LEN = 5;
 		int[][] arrOrigin = { 
-				{ 1, 2, 3, 4, 5 }, 
-				{ 6, 7, 8, 9, 10 }, 
+				{  1,  2,  3,  4,  5 }, 
+				{  6,  7,  8,  9, 10 }, 
 				{ 11, 12, 13, 14, 15 }, 
 				{ 16, 17, 18, 19, 20 },
 				{ 21, 22, 23, 24, 25 } };
@@ -33,7 +33,7 @@ public class ExPage08 {
 		{
 			for(int j=0; j<arrInt[i].length; j++)
 			{
-				arrTemp[iColLen -1 - j][i] = arrInt[i][j]; 
+				arrTemp[iColLen - 1 - j][i] = arrInt[i][j]; 
 			}
 		}
 		

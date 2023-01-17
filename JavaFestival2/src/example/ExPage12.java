@@ -8,10 +8,14 @@ public class ExPage12 {
 		String strScore = "OOOXOO";
 		int iSumScore = 0;
 		
+		strScore = "OOOXOO";
 		System.out.println(strScore);
-		
 		iSumScore = checkScore(strScore);
-		
+		System.out.println(iSumScore);
+
+		strScore = "OOOXOOXOOOOXO";
+		System.out.println(strScore);
+		iSumScore = checkScore(strScore);
 		System.out.println(iSumScore);
 
 		System.out.println("*** Finish ***");
@@ -25,8 +29,8 @@ public class ExPage12 {
 		for (int i = 0; i < strSplit.length; i++) {
 			iSumScore += sumOnetoNum(strSplit[i].length());
 			
-//			System.out.printf("iSumScore : %d, strSplit[%d] : %s = %d %n", 
-//					iSumScore, i, strSplit[i], strSplit[i].length());
+			System.out.printf("iSumScore : %d, strSplit[%d] : %s = %d %n", 
+					iSumScore, i, strSplit[i], strSplit[i].length());
 		}
 		
 		return iSumScore;
