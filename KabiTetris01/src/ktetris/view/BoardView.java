@@ -7,13 +7,13 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.logging.Logger;
 
+import javax.sound.sampled.Clip;
 import javax.swing.JPanel;
 
 import ktetris.controller.KTetrisController;
 import ktetris.model.KTetrisBlock;
 import ktetris.model.KTetrisBoard;
 import ktetris.model.ViewListener;
-import main.ImageLoader;
 
 
 public class BoardView extends JPanel implements ViewListener{
@@ -22,11 +22,15 @@ public class BoardView extends JPanel implements ViewListener{
 	private final static Logger LOG = Logger.getGlobal();
 	private final static int BOARD_X = 6;
 	private final static int BOARD_Y = 58;
-	private final static int BOARD_WIDTH = 300;
-	private final static int BOARD_HEIGHT = 600;
+//	private final static int BOARD_X = 0;
+//	private final static int BOARD_Y = 0;
+	
+	private final static int BOARD_WIDTH = 400;
+	private final static int BOARD_HEIGHT = 550;
 	
 	private BufferedImage imageBlocks;	
 	private BufferedImage imageBackground;	
+	private Clip clipMmusic;
 	
 	private KTetrisController controller;
 	
@@ -40,6 +44,8 @@ public class BoardView extends JPanel implements ViewListener{
 		
 		imageBlocks = ImageLoader.loadImage("./textures/tiles.png");
 		imageBackground = ImageLoader.loadImage("./textures/background.png");
+		clipMmusic = ImageLoader.LoadSound("./textures/music.wav");
+//		clipMmusic.loop(Clip.LOOP_CONTINUOUSLY);
 		
 		LOG.info("*** Finish ***");
 	}
@@ -90,10 +96,10 @@ public class BoardView extends JPanel implements ViewListener{
 			for (int j = 0; j < 4; j++) {
 				if (lookingBlock.block[j][i] > 0) {
 					g.setColor(lookingBlock.color);
-					g.fillRect(width * (i + lookingBlock.posX), height * (j + lookingBlock.posY), width, height);
+//					g.fillRect(width * (i + lookingBlock.posX), height * (j + lookingBlock.posY), width, height);
 					
-//					g.drawImage(imageBlocks.getSubimage(30, 0, 30, 30), 
-//							width * (i + lookingBlock.posX), height * (j + lookingBlock.posY), null);
+					g.drawImage(imageBlocks.getSubimage(30, 0, 30, 30), 
+							width * (i + lookingBlock.posX), height * (j + lookingBlock.posY), null);
 
 					LOG.info(String.format("x:%d, y:%d, w:%d, h:%d %n", 
 							width * (i + lookingBlock.posX), height * (j + lookingBlock.posY), width, height));

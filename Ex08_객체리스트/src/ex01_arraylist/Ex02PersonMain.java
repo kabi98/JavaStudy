@@ -13,7 +13,7 @@ public class Ex02PersonMain {
 		pList.add(new Person("구소현", 26));
 		pList.add(new Person("남하은", 26));
 		pList.add(new Person("장이수", 35));
-
+		
 //		System.out.printf("%d %n", pList.size());
 
 		for (int i = 0; i < pList.size(); i++) {

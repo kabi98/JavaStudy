@@ -33,7 +33,10 @@ public class ImageLoader {
 	public static Clip LoadSound(String direction){
 		try{
 			Clip clip = AudioSystem.getClip();
-			clip.open(AudioSystem.getAudioInputStream(ImageLoader.class.getResource(direction)));
+			clip.open(AudioSystem.getAudioInputStream(new File(direction)));
+//			clip.open(AudioSystem.getAudioInputStream(ImageLoader.class.getResource(direction)));
+//			return ImageIO.read(new File(path));
+			
 			return clip;
 		}catch(Exception e){
 			e.printStackTrace();
