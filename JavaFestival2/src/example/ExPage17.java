@@ -18,7 +18,6 @@ public class ExPage17 {
 		iInput = 4;
 		iResult = getFactorial(iInput);
 		System.out.printf("%d : Factorial => %d %n", iInput, iResult);
-
 		
 		System.out.println("*** Finish ***");
 

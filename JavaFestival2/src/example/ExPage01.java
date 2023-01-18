@@ -6,7 +6,7 @@ public class ExPage01 {
 
 	public static void main(String[] args) {
 		System.out.println("*** Start ***");
-		
+
 		final int START_NUM = 1, END_NUM = 45, NUM_LEN = 6;
 
 		int[] arrLotto = new int[NUM_LEN];
@@ -22,8 +22,8 @@ public class ExPage01 {
 				arrLotto[iCur] = iNewNum;
 				iCur++;
 			}
-//			System.out.printf("NewNum %2d ", iNewNum);
-//			printArrayNoLine(arrLotto);
+			System.out.printf("NewNum %2d ", iNewNum);
+			printArray(arrLotto);
 		}
 		printLotto(arrLotto);
 
@@ -41,7 +41,7 @@ public class ExPage01 {
 		return isDupl;
 	}
 
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 		System.out.printf(" Array : ");
 
 		for (int i = 0; i < arrInt.length; i++) {

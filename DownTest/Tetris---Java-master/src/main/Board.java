@@ -101,9 +101,6 @@ public class Board extends JPanel implements KeyListener, MouseListener, MouseMo
 		refresh = ImageLoader.loadImage("/refresh.png");
 		
 		music = ImageLoader.LoadSound("/music.wav");
-		
-		
-		
 		music.loop(Clip.LOOP_CONTINUOUSLY);
 		
 		
@@ -189,7 +186,6 @@ public class Board extends JPanel implements KeyListener, MouseListener, MouseMo
 				
 				if(board[row][col] != 0)
 				{
-					
 					g.drawImage(blocks.getSubimage((board[row][col] - 1)*blockSize,
 							0, blockSize, blockSize), col*blockSize, row*blockSize, null);
 				}				

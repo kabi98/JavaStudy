@@ -18,13 +18,13 @@ public class ExPage04 {
 		arrBinary = DecimalToBinary(iDecimal);
 		
 		System.out.printf("이진수 : ");
-		printArrayNoLine(arrBinary);
+		printArray(arrBinary);
 
 		sc.close();
 		System.out.println("*** Finish ***");
 	}
 	
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %d", arrInt[i]);

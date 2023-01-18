@@ -17,7 +17,7 @@ public class ExPage10 {
 			System.out.printf("%d", iScan);
 			
 			arrScan = DecimalToArray(iScan);
-			printArrayNoLine(arrScan);
+			printArray(arrScan);
 			
 			iDashCount = countDashFromArray(arrScan);
 			if(arrScan[0] == 0) {
@@ -77,7 +77,7 @@ public class ExPage10 {
 		return arrDecimal;
 	}
 	
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}

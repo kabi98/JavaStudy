@@ -28,7 +28,7 @@ public class ExPage09 {
 		}
 		
 		System.out.printf("N = %d, X = %d %n", iN, iX);
-		printArrayNoLine(arrScan);
+		printArray(arrScan);
 
 		iCount = 0;
 		for (int i = 0; i < arrScan.length; i++) {
@@ -39,20 +39,20 @@ public class ExPage09 {
 			}
 		}
 		System.out.print("결과 >>");
-		printArrayNoLine(arrSmall, iCount);
+		printArray(arrSmall, iCount);
 
 		sc.close();
 		System.out.println("*** Finish ***");
 	}
 	
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}
 		System.out.printf("%n");
 	}
 	
-	private static void printArrayNoLine(int[] arrInt, int iLen) {
+	private static void printArray(int[] arrInt, int iLen) {
 		for (int i = 0; i < iLen; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}

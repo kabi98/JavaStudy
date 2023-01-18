@@ -9,17 +9,20 @@ import javax.swing.JFrame;
 import ktetris.controller.KTetrisController;
 
 public class MainFrame extends JFrame implements WindowListener {
-
+	
 	private static final long serialVersionUID = -6582020535286376937L;
 	private KTetrisController controller;
 	private final static Logger LOG = Logger.getGlobal();
+	
+	private final static int WINDOW_X = 100, WINDOW_Y = 100;
+	private final static int WINDOW_WIDTH = 500, WINDOW_HEIGHT = 800;
 
 	public MainFrame() {
 		super();
 		LOG.info("*** Start ***");
 
 		this.setResizable(false);
-		this.setBounds(100, 100, 359, 600);
+		this.setBounds(WINDOW_X, WINDOW_Y, WINDOW_WIDTH, WINDOW_HEIGHT);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().setLayout(null);
 

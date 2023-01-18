@@ -11,13 +11,13 @@ public class ExPage14 {
 
 		strBinary = "01001101";
 		arrBinary = BinaryToArray(strBinary);
-		printArrayNoLine(arrBinary);
+		printArray(arrBinary);
 		iDecimal = BinaryToDecimal(arrBinary);
 		System.out.printf("%s (2) = %d(10) %n", strBinary, iDecimal);
 
 		strBinary = "00101000";
 		arrBinary = BinaryToArray(strBinary);
-		printArrayNoLine(arrBinary);
+		printArray(arrBinary);
 		iDecimal = BinaryToDecimal(arrBinary);
 		System.out.printf("%s (2) = %d(10) %n", strBinary, iDecimal);
 
@@ -47,7 +47,7 @@ public class ExPage14 {
 		return arrInt;
 	}
 
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}

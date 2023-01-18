@@ -4,14 +4,13 @@ import java.awt.Color;
 import java.util.Random;
 import java.util.logging.Logger;
 
-import com.lemonapple.javatetris.model.TetrisBoard;
-
 import ktetris.controller.KTetrisController;
 
 public class KTetrisBlock {
 	public final int BLOCK_TYPE = 7;
 	public final int BLOCK_ROW = 4;
 	public final int BLOCK_COL = 4;
+	
 	// rainbow 7 colors : red, orange, yellow, green, blue, indigo, purple
 	public static final Color[] COLORS = { Color.RED, Color.ORANGE,
 			Color.YELLOW, Color.GREEN, Color.BLUE, Color.decode("#4B0082"),
@@ -40,40 +39,40 @@ public class KTetrisBlock {
 		LOG.info("**** Start *****");
 		
 		if (type == 0) {
-			block[0] = new int[] { 1, 0, 0, 0 };
-			block[1] = new int[] { 1, 0, 0, 0 };
-			block[2] = new int[] { 1, 0, 0, 0 };
-			block[3] = new int[] { 1, 0, 0, 0 };
+			block[0] = new int[] { 0, 1, 0, 0 };
+			block[1] = new int[] { 0, 1, 0, 0 };
+			block[2] = new int[] { 0, 1, 0, 0 };
+			block[3] = new int[] { 0, 1, 0, 0 };
 		} else if (type == 1) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 1, 0, 0, 0 };
-			block[3] = new int[] { 1, 1, 1, 0 };
+			block[1] = new int[] { 0, 1, 0, 0 };
+			block[2] = new int[] { 0, 1, 1, 1 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		} else if (type == 2) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 1, 1, 1, 0 };
-			block[3] = new int[] { 0, 0, 1, 0 };
+			block[1] = new int[] { 1, 1, 1, 0 };
+			block[2] = new int[] { 0, 0, 1, 0 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		} else if (type == 3) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 1, 1, 0, 0 };
-			block[3] = new int[] { 1, 1, 0, 0 };
+			block[1] = new int[] { 0, 1, 1, 0 };
+			block[2] = new int[] { 0, 1, 1, 0 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		} else if (type == 4) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 0, 1, 0, 0 };
-			block[3] = new int[] { 1, 1, 1, 0 };
+			block[1] = new int[] { 0, 1, 0, 0 };
+			block[2] = new int[] { 1, 1, 1, 0 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		} else if (type == 5) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 0, 1, 1, 0 };
-			block[3] = new int[] { 1, 1, 0, 0 };
+			block[1] = new int[] { 0, 1, 1, 0 };
+			block[2] = new int[] { 1, 1, 0, 0 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		} else if (type >= 6) {
 			block[0] = new int[] { 0, 0, 0, 0 };
-			block[1] = new int[] { 0, 0, 0, 0 };
-			block[2] = new int[] { 1, 1, 0, 0 };
-			block[3] = new int[] { 0, 1, 1, 0 };
+			block[1] = new int[] { 1, 1, 0, 0 };
+			block[2] = new int[] { 0, 1, 1, 0 };
+			block[3] = new int[] { 0, 0, 0, 0 };
 		}
 		
 		LOG.info("**** Finish *****");
@@ -90,6 +89,25 @@ public class KTetrisBlock {
 		return ;
 	}	
 	
+	private static int[][] rotate(int[][] m) {
+		LOG.info("**** Start *****");
+		int N = m.length;
+		int M = m[0].length;
+		// 돌린 크기만큼으로 생성해준다.
+		int[][] copyMap = new int[M][N];
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				copyMap[j][N - 1 - i] = m[i][j];
+			}
+		}
+
+		LOG.info("**** Finish *****");
+		// 새로 돌린 배열로 반환해준다.
+		return copyMap;
+	}
+
+	
 
 	public void rotateBlock(KTetrisBoard board) {
 		LOG.info("**** Start *****");
@@ -97,13 +115,15 @@ public class KTetrisBlock {
 		int[][] currentBlock = block.clone();
 		int[][] nextBlock = new int[4][4];
 
-		// 회전 시킨다.
-		for (int i = 0; i < block.length; i++)
-			for (int j = 0; j < block[i].length; j++)
-				nextBlock[i][j] = 0;
-		for (int i = 0; i < block.length; i++)
-			for (int j = 0; j < block[i].length; j++)
-				nextBlock[i][j] = block[j][3 - i];
+//		// 회전 시킨다.
+//		for (int i = 0; i < block.length; i++)
+//			for (int j = 0; j < block[i].length; j++)
+//				nextBlock[i][j] = 0;
+//		for (int i = 0; i < block.length; i++)
+//			for (int j = 0; j < block[i].length; j++)
+//				nextBlock[i][j] = block[j][3 - i];
+		
+		nextBlock = rotate(currentBlock);
 
 		block = nextBlock;
 //		trim(); // 일단 적용하고.

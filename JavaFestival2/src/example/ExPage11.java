@@ -21,13 +21,13 @@ public class ExPage11 {
 		iScanTwo = sc.nextInt();
 		
 		arrTwo = DecimalToInverseArray(iScanTwo);
-		printArrayNoLine(arrTwo);
+		printArray(arrTwo);
 		
 		for(int i=0; i< arrMultiple.length; i++)
 		{
 			arrMultiple[i] = iScanOne * arrTwo[i];
 		}
-		printArrayNoLine(arrMultiple);
+		printArray(arrMultiple);
 		
 		iSum = 0; 
 		iPlaceValue = 1;
@@ -36,7 +36,7 @@ public class ExPage11 {
 			iSum += arrMultiple[i] * iPlaceValue;
 			iPlaceValue *= 10; 
 		}
-		printArray(arrMultiple);
+		printArrayWithLine(arrMultiple);
 		System.out.printf(" %d %n", iSum);
 		
 		sc.close();
@@ -65,14 +65,14 @@ public class ExPage11 {
 		return arrInverse;
 	}
 	
-	private static void printArray(int[] arrInt) {
+	private static void printArrayWithLine(int[] arrInt) {
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 			System.out.printf("%n");
 		}
 	}
 
-	private static void printArrayNoLine(int[] arrInt) {
+	private static void printArray(int[] arrInt) {
 		for (int i = 0; i < arrInt.length; i++) {
 			System.out.printf(" %2d", arrInt[i]);
 		}
