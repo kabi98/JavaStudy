@@ -23,6 +23,7 @@ public class ExPage14 {
 		int iMid = 0;
 
 		iMid = strInput.length() / 2;
+		System.out.printf("Input : %s,  Mid : %d Len : %d %n", strInput, iMid, strInput.length());
 
 		if (strInput.length() % 2 == 1) {
 			arrMid[0] = strInput.charAt(iMid);
