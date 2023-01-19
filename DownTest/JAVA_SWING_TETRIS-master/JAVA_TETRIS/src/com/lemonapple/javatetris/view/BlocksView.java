@@ -25,6 +25,9 @@ public class BlocksView extends JPanel {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
+		
+		System.out.println("BlockView paint");
+/*		
 		g.setColor(Color.WHITE);
 		g.fill3DRect(0, 0, getWidth(), getHeight(), true);
 		if (lookingBlock == null) {
@@ -40,8 +43,11 @@ public class BlocksView extends JPanel {
 //				g.fillRect(width * i, height * j, width, height);
 				g.fill3DRect(width * i, height * j, width, height, true);
 				
+				
 			}
 		}
+*/		
+		
 	}
 
 }

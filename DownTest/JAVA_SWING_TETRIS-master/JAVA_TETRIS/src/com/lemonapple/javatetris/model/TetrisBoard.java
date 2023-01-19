@@ -18,6 +18,7 @@ public class TetrisBoard {
 	}
 
 	public void addBlock(TetrisBlock block) {
+		System.out.println("addBlock");
 		for (int i = 0; i < block.block.length; i++) {
 			for (int j = 0; j < block.block[i].length; j++) {
 				if (block.posY + i >= y

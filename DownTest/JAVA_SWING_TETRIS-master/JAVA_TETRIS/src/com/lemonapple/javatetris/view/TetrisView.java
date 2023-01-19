@@ -28,6 +28,8 @@ public class TetrisView extends JPanel implements ViewListener {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
+		System.out.println("TetrisView paint");
+
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, getWidth(), getHeight());
 		int height = getHeight() / 20;
@@ -59,6 +61,7 @@ public class TetrisView extends JPanel implements ViewListener {
 
 	@Override
 	public void onRePaint() {
+		System.out.println("TetrisView onRePaint");
 		repaint();
 	}
 
