@@ -24,7 +24,6 @@
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ex01_arraylist.Person"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
@@ -39,4 +38,10 @@
     <fullyQualifiedTypeName name="model.KTetrisBlock"/>
     <fullyQualifiedTypeName name="model.ViewListener"/>
     <fullyQualifiedTypeName name="controller.KTetrisController"/>
+    <fullyQualifiedTypeName name="tetrismain.Constants"/>
+    <fullyQualifiedTypeName name="javazoom.jl.player.MP3Player"/>
+    <fullyQualifiedTypeName name="java.nio.file.Path"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="music.MusicVO"/>
 </qualifiedTypeNameHistroy>
