@@ -1,10 +1,10 @@
 package music;
 
-public class MusicVO {
+public class MusicDTO {
 
 	private String singer, title, path;
 
-	public MusicVO(String singer, String title, String path) {
+	public MusicDTO(String singer, String title, String path) {
 		this.singer = singer;
 		this.title = title;
 		this.path = path;

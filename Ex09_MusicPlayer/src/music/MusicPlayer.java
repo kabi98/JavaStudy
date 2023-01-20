@@ -14,7 +14,7 @@ public class MusicPlayer {
 //	static ArrayList<MusicVO> musicList = new ArrayList<>();
 
 	static MP3Player mp3 = null;
-	static ArrayList<MusicVO> musicList = null;
+	static ArrayList<MusicDTO> musicList = null;
 	static Scanner sc = null;
 	
 	final static int MAIN_PLAY = 1, MAIN_SEARCH = 2, MAIN_ADD = 3, MAIN_DELETE = 4, MAIN_END = 5;
@@ -25,13 +25,14 @@ public class MusicPlayer {
 
 		System.out.println("*** Start ***");
 		mp3 = new MP3Player();
+		
 		musicList = new ArrayList<>();
 
-		musicList.add(new MusicVO("뉴진스", "Hype boy", ".\\mp3\\뉴진스-HypeBoy.mp3"));
-		musicList.add(new MusicVO("르세라핌", "Antifragile", ".\\mp3\\르세라핌-Antifragile.mp3"));
-		musicList.add(new MusicVO("아이브", "LoveDive", ".\\mp3\\아이브-LoveDive.mp3"));
-		musicList.add(new MusicVO("윤하", "사건의지평선", ".\\mp3\\윤하-사건의지평선.mp3"));
-		musicList.add(new MusicVO("카라", "WhenIMove", ".\\mp3\\카라-WhenIMove.mp3"));
+		musicList.add(new MusicDTO("뉴진스", "Hype boy", ".\\mp3\\뉴진스-HypeBoy.mp3"));
+		musicList.add(new MusicDTO("르세라핌", "Antifragile", ".\\mp3\\르세라핌-Antifragile.mp3"));
+		musicList.add(new MusicDTO("아이브", "LoveDive", ".\\mp3\\아이브-LoveDive.mp3"));
+		musicList.add(new MusicDTO("윤하", "사건의지평선", ".\\mp3\\윤하-사건의지평선.mp3"));
+		musicList.add(new MusicDTO("카라", "WhenIMove", ".\\mp3\\카라-WhenIMove.mp3"));
 
 		for (int i = 0; i < musicList.size(); i++) {
 			musicList.get(i).printAll();
@@ -73,12 +74,14 @@ public class MusicPlayer {
 
 	public static void playSong(int index) {
 
-		mp3.play(musicList.get(index).getPath());
-		System.out.printf("id: %d => 가수 : %s - 노래제목 : %s %n",
-				index, 
-				musicList.get(index).getSinger(),
-				musicList.get(index).getTitle());
-
+		String strSinger = musicList.get(index).getSinger();
+		String strTitle = musicList.get(index).getTitle();
+		String strPath = musicList.get(index).getPath();
+		
+		mp3.play(strPath);
+		
+		System.out.printf("id: %2d => 가수 : %8s - 노래제목 : %s %n",
+				index, strSinger, strTitle);
 	}
 
 	public static void runPlayMenu() {
