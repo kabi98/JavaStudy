@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;iRemain&apos; in &apos;ex02연산자.Ex03산술연산자실습.main(...)&apos; to &apos;iHourRemain&apos;&#x0D;&#x0A;- Original project: &apos;Ex01변수와연산자&apos;&#x0D;&#x0A;- Original element: &apos;ex02연산자.Ex03산술연산자실습.main(String[]).iRemain&apos;&#x0D;&#x0A;- Renamed element: &apos;iRemain&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;iRemain&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ex02연산자{Ex03산술연산자실습.java[Ex03산술연산자실습~main~\[QString;@iRemain!469!502!495!501!I!0!false" name="iHourRemain" references="true" stamp="1672644216374" version="1.0"/>
-</session>
