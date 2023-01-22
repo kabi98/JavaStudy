@@ -20,6 +20,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Git\KabiTetris\KabiTetris_V1"/>
 			<item value="D:\Git\JavaStudy\DownTest\tetris-2.0-master"/>
 			<item value="D:\Git\KabiTetris"/>
 			<item value="D:\Git\JavaStudy\DownTest\Tetris---Java-master"/>
@@ -34,6 +35,19 @@
 			<item value="D:\Git\JavaStudy\TetrisForDesktopWithJava-dev_ver_0_4"/>
 			<item value="D:\Git\JavaStudy\TetrisForDesktopWithJava-dev_ver_0_1"/>
 			<item value="D:\Git\JavaStudy"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Git\KabiTetris\KabiTetrisV2"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
 		</list>
 	</section>
 </section>

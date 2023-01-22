@@ -15,6 +15,9 @@ public class ExPage04 {
 
 		System.out.print("총금액 입력 : ");
 		iScanMoney = sc.nextInt();
+		System.out.println();
+		
+		
 		iRemainMoney = iScanMoney;
 		
 		iTenThousand = iRemainMoney / 10000;

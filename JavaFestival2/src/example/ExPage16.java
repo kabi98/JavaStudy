@@ -21,7 +21,7 @@ public class ExPage16 {
 		
 
 		iAlphaLen = 'z' - 'a' + 1;
-//		System.out.printf("z : %d, a : %d, z-a : %d %n", (int) 'z', (int) 'a', iAlphaLen);
+		System.out.printf("z : %d, a : %d, z-a : %d %n", (int) 'z', (int) 'a', iAlphaLen);
 
 		arrAlphaCount = new int[iAlphaLen];
 		countStringsAlphbet(strScan, arrAlphaCount);
