@@ -27,6 +27,7 @@ public class ExPage11 {
 		{
 			arrMultiple[i] = iScanOne * arrTwo[i];
 		}
+		
 		printArray(arrMultiple);
 		
 		iSum = 0; 
@@ -44,22 +45,24 @@ public class ExPage11 {
 	}
 	
 	private static int[] DecimalToInverseArray(int iDecimal) {
-		ArrayList<Integer> listInverse = new ArrayList<>();
+		int[] arrUnknown = new int[1000];
 		int[] arrInverse = null;
 
 		int iQuotient = 0, iRemainder = 0;
+		int iLen = 0;
 
 		iQuotient = iDecimal;
 		do {
 			iRemainder = iQuotient % 10;
 			iQuotient = iQuotient / 10;
-			listInverse.add(iRemainder);
+			arrUnknown[iLen] = iRemainder;
+			iLen++;
 		} while (iQuotient > 0);
 
-		arrInverse = new int[listInverse.size()];
+		arrInverse = new int[iLen];
 
-		for (int i = 0; i < listInverse.size(); i++) {
-			arrInverse[i] = listInverse.get(i);
+		for (int i = 0; i < iLen; i++) {
+			arrInverse[i] = arrUnknown[i];
 		}
 		
 		return arrInverse;

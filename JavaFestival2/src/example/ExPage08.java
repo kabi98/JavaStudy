@@ -14,12 +14,12 @@ public class ExPage08 {
 
 		int[][] arrRotate = new int[ARR_LEN][ARR_LEN];
 
-		printTwoDimArray(arrOrigin);
+		printArray(arrOrigin);
 		arrRotate = rotateArrayLeft(arrOrigin);
 		
 		System.out.println("");
 		System.out.println("90도 회전");
-		printTwoDimArray(arrRotate);
+		printArray(arrRotate);
 
 		System.out.println("*** Finish ***");
 	}
@@ -40,7 +40,7 @@ public class ExPage08 {
 		return arrTemp;
 	}
 
-	private static void printTwoDimArray(int[][] arrInt) {
+	private static void printArray(int[][] arrInt) {
 
 		for (int i = 0; i < arrInt.length; i++) {
 			for (int j = 0; j < arrInt[i].length; j++) {

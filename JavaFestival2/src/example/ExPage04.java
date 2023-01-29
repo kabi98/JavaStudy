@@ -33,23 +33,28 @@ public class ExPage04 {
 	}
 
 	private static int[] DecimalToBinary(int iDecimal) {
-		ArrayList<Integer> listInverse = new ArrayList<>();
+		int[] arrUnknown = new int[1000]; 
 		int[] arrBinary = null;
 
 		int iQuotient = 0, iRemainder = 0;
+		int iLen = 0;
 
 		iQuotient = iDecimal;
 		do {
 			iRemainder = iQuotient % 2;
 			iQuotient = iQuotient / 2;
-			listInverse.add(iRemainder);
+			
+			arrUnknown[iLen] = iRemainder;
+			iLen++;
 		} while (iQuotient > 0);
 
-		arrBinary = new int[listInverse.size()];
+//		System.out.printf("iLen: %d , iDecimal : %d %n", iLen, iDecimal);
+		
+		arrBinary = new int[iLen];
 
 		int iPlace = 0;
-		for (int i = listInverse.size() - 1; i >= 0; i--) {
-			arrBinary[iPlace] = listInverse.get(i);
+		for (int i = iLen - 1; i >= 0; i--) {
+			arrBinary[iPlace] = arrUnknown[i];
 			iPlace ++;
 		}
 		

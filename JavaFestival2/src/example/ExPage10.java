@@ -54,23 +54,26 @@ public class ExPage10 {
 	}
 
 	private static int[] DecimalToArray(int iDecimal) {
-		ArrayList<Integer> listInverse = new ArrayList<>();
+		int[] arrUnknown = new int[1000];
 		int[] arrDecimal = null;
 
 		int iQuotient = 0, iRemainder = 0;
+		int iLen = 0;
 
 		iQuotient = iDecimal;
 		do {
 			iRemainder = iQuotient % 10;
 			iQuotient = iQuotient / 10;
-			listInverse.add(iRemainder);
+			arrUnknown[iLen] = iRemainder;
+			iLen++;
 		} while (iQuotient > 0);
+//		System.out.printf("iLen : %d iDecimal : %d %n", iLen, iDecimal);
 
-		arrDecimal = new int[listInverse.size()];
+		arrDecimal = new int[iLen];
 
 		int iPlace = 0;
-		for (int i = listInverse.size() - 1; i >= 0; i--) {
-			arrDecimal[iPlace] = listInverse.get(i);
+		for (int i = iLen - 1; i >= 0; i--) {
+			arrDecimal[iPlace] = arrUnknown[i];
 			iPlace ++;
 		}
 		

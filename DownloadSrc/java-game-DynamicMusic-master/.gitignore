@@ -1,0 +1,12 @@
+
+## 아래 내용은 포함하지 않습니다!
+build/
+out/
+
+*.mp3
+/src/main/resources/game_images/
+/src/main/resources/game_music/
+/src/main/resources/menu_music/
+/src/main/resources/readNote/
+
+/src/main/java/DynamicMusic/DB_info.java
