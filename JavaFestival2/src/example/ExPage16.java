@@ -38,7 +38,7 @@ public class ExPage16 {
 		for (int i = 0; i < arrAlphaCount.length; i++) {
 			arrAlphaCount[i] = 0;
 		}
-
+		
 		for (int i = 0; i < strInput.length(); i++) {
 			iChar = strInput.charAt(i) - 'a';
 			if (0 <= iChar && iChar < arrAlphaCount.length) {
