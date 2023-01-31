@@ -8,4 +8,5 @@
 module KabiDynamicBeat {
 	requires java.desktop;
 	requires jlayer;
+
 }

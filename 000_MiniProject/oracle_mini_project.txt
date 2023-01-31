@@ -1,0 +1,18 @@
+- oracle21.3.0
+url서버주소 : gjaischool-b.ddns.net
+port number : 1525
+user : 유저명
+password : 비밀번호
+
+
+산출물
+테이블 명세서
+ER-다이어그램
+시스템흐름도
+
+
+https://drive.google.com/drive/my-drive
+
+https://drive.google.com/drive/folders/15Z9fV47ccxAoZxQeQVGYDoUq7UhD4IAM
+
+https://docs.google.com/spreadsheets/d/1orDVKIOVBjcwcU-sKm4weucbbyqcSe6qgH_q09S_rws/edit?usp=sharing
