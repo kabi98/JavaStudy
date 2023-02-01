@@ -8,6 +8,7 @@ public class KabiBeatMain {
 	public static void main(String[] args) {
 		
 		new KabiBeat();
+		
 
 	}
 
