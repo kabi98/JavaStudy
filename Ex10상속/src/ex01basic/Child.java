@@ -12,4 +12,6 @@ public class Child extends Parent {
 		System.out.println("맛있는 삼겹살 김치전을 만들자~ 바사삭~");
 	}
 	
+	
+	
 }

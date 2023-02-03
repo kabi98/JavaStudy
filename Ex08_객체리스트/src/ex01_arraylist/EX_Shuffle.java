@@ -12,6 +12,8 @@ public class EX_Shuffle {
 		Integer[] array = {1, 2, 3, 4, 5, 6, 7};
 		List<Integer> list = Arrays.asList(array); 
 		
+		list.size()
+		
 		printArray(array);
 		
 		Collections.shuffle(list);
