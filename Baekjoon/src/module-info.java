@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author KabiHome
- *
- */
-module Baekjoon {
-}
